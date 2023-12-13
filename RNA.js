@@ -25,14 +25,13 @@ g(signalList = [])
 {
     let u = 0;
 
-    for (let i=0; i< this.weightList.lenght; i++)
-    {
-        u += signalList[i] * this.weightList[1];
+    for (let i = 0; i < this.weightList.length; i++) {
+      u += signalList[i] * this.weightList[i];
     }
-
+    
     if (Math.tanh(u) > this.bias) return 1; //ativado
-    else return 0; //desativado    
-};
+    else return 0; //desativado   
+}
 
 mutate(rate=1)
 {
@@ -82,7 +81,7 @@ mutate(rate=1);
     }
 }
 
-load(rna);
+load(rna) 
 {
     if (!rna) return;
     try{
