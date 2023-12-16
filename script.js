@@ -58,7 +58,7 @@ setInterval(() => {
     game.restart()
     }
 
-    const {tRex, horizon, currentSpeed, distanceRun, dimensions} = game
+    const {tRex, horizon, currentSpeed, distanceRan, dimensions} = game
     dino.score = distanceRan - 2000 //calculando a pontuação do dino
 
     const player = {
@@ -87,9 +87,9 @@ setInterval(() => {
             height,
         ]);
 
-        if (jump === crouch) return
+        if (jump === crounch) return
         if (jump) controls.dispatch('jump')
-        if (crouch) controls.dispatch('crouch')
+        if (crounch) controls.dispatch('crounch')
     };
 }, 100);
 
